@@ -10,19 +10,40 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 </head>
 
 <body>
-    <div class="flex justify-center mt-5 ">
-        <div class="w-[1440px] px-24 inline-flex justify-between items-center overflow-hidden">
+    <div class="flex justify-center mt-5">
+        <div class="w-full lg:w-[1440px] lg:px-24 px-5 inline-flex justify-between items-center overflow-hidden">
             <div class="py-2.5 flex justify-start items-start gap-2.5 overflow-hidden">
                 <div data-property-1="Default" class="w-56 h-9 relative">
                     <div><img alt="logo" src="./images/Logo.png" />
                     </div>
                 </div>
             </div>
-            <div class="flex justify-center items-center gap-10">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden flex flex-col">
+                    <img alt="logo" src="./images/line.png" />
+                    <img alt="logo" src="./images/line.png" />
+                    <img alt="logo" src="./images/line.png" />
+                </div>
+                <ul tabindex="-1"
+                    class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                    <li><a>Item 1</a></li>
+                    <li>
+                        <a>Parent</a>
+                        <ul class="p-2">
+                            <li><a>Submenu 1</a></li>
+                            <li><a>Submenu 2</a></li>
+                        </ul>
+                    </li>
+                    <li><a>Item 3</a></li>
+                </ul>
+            </div>
+            <div class="hidden lg:flex justify-center items-center gap-10">
                 <div class="justify-start text-black text-xl font-normal font-['Space_Grotesk'] leading-7">About us
                 </div>
                 <div class="justify-start text-black text-xl font-normal font-['Space_Grotesk'] leading-7">Services
@@ -41,27 +62,32 @@
         </div>
     </div>
     <div class="flex justify-center mt-20">
-        <div class="w-[1440px] px-24 inline-flex justify-between items-start overflow-hidden">
+        <div class="w-full lg:w-[1440px] lg:px-24 px-5 inline-flex lg:justify-between items-start overflow-hidden">
             <div class="inline-flex flex-col justify-start items-start gap-9">
-                <div class="w-[531px] justify-start text-black text-6xl font-medium font-['Space_Grotesk']">Navigating
+                <div class="sm:w-[531px] justify-start text-black text-6xl max-sm:text-5xl font-medium font-['Space_Grotesk']">
+                    Navigating
                     the digital landscape for success</div>
-                <div class="w-[498px] justify-start text-black text-xl font-normal font-['Space_Grotesk'] leading-7">Our
+                <div class="lg:hidden">
+                    <img alt="cover_image" src="./images/cover.png">
+                </div>
+                <div class="sm:w-[498px] justify-start text-black text-xl font-normal font-['Space_Grotesk'] leading-7">
+                    Our
                     digital marketing agency helps businesses grow and succeed online through a range of services
                     including SEO, PPC, social media marketing, and content creation.</div>
                 <div data-property-1="Button primary"
-                    class="px-9 py-5 bg-zinc-900 rounded-2xl inline-flex justify-start items-start gap-2.5">
+                    class="max-sm:w-full px-9 py-5 bg-zinc-900 rounded-2xl inline-flex justify-start items-start gap-2.5">
                     <div
                         class="text-center justify-start text-white text-xl font-normal font-['Space_Grotesk'] leading-7">
                         Book a consultation</div>
                 </div>
             </div>
-            <div>
+            <div class="hidden lg:flex">
                 <img alt="cover_image" src="./images/cover.png">
             </div>
         </div>
     </div>
     <div class="flex justify-center mt-20">
-        <div class="w-[1440px] px-24 inline-flex justify-between items-start overflow-hidden">
+        <div class="lg:w-[1440px] lg:px-24 px-5 inline-flex justify-between items-start overflow-hidden">
             <div data-company="Amazon" class="w-32 h-12 relative mix-blend-luminosity overflow-hidden">
                 <img alt="company-logo" src="./images/amazon.png" />
             </div>
@@ -83,13 +109,13 @@
         </div>
     </div>
     <div class="flex justify-center mt-40">
-        <div class="w-[1440px] px-24 inline-flex justify-start items-start gap-10">
-            <div data-property-1="Green" class="inline-flex flex-col justify-start items-start">
-                <div class="px-1.5 bg-lime-300 rounded-md flex flex-col justify-start items-start gap-2.5">
-                    <div class="justify-start text-black text-4xl font-medium font-['Space_Grotesk']">Case Studies</div>
+        <div class="w-full lg:w-[1440px] lg:px-24 px-5 flex-row lg:inline-flex lg:justify-start items-start gap-10">
+            <div data-property-1="Green" class="flex justify-center sm:inline-flex flex-col sm:justify-start items-start">
+                <div class="px-1.5 bg-lime-300 rounded-md flex flex-col justify-center sm:justify-start sm:text-center items-start gap-2.5">
+                    <div class="text-center max-sm:justify-start text-black text-4xl font-medium font-['Space_Grotesk']">Case Studies</div>
                 </div>
             </div>
-            <div class="w-[580px] justify-start text-black text-lg font-normal font-['Space_Grotesk']">Explore Real-Life
+            <div class="sm:w-[580px] text-center sm:justify-start text-black text-lg font-normal font-['Space_Grotesk']">Explore Real-Life
                 Examples of Our Proven Digital Marketing Success through Our Case Studies</div>
         </div>
     </div>
@@ -133,8 +159,8 @@
         </div>
     </div>
     <div class="flex justify-center mt-40">
-        <div class="w-[1440px] px-24 inline-flex justify-start items-start gap-10">
-            <div data-property-1="Green" class="inline-flex flex-col justify-start items-start">
+        <div class="w-full lg:w-[1440px] lg:px-24 px-5 inline-flex justify-start items-start gap-10">
+            <div data-property-1="Green" class="sm:inline-flex flex-col sm:justify-start items-start">
                 <div class="px-1.5 bg-lime-300 rounded-md flex flex-col justify-start items-start gap-2.5">
                     <div class="justify-start text-black text-4xl font-medium font-['Space_Grotesk']">Our Working
                         Process </div>
@@ -145,13 +171,13 @@
         </div>
     </div>
     <div class="flex justify-center mt-20">
-        <div class="px-24 inline-flex flex-col justify-start items-start gap-7">
+        <div class="lg:px-24 inline-flex flex-col justify-start items-start gap-7">
             <div
-                class="w-[1234px] px-14 py-10 bg-lime-300 rounded-[45px] shadow-[0px_5px_0px_0px_rgba(25,26,35,1.00)] outline outline-1 outline-offset-[-1px] outline-zinc-900 flex flex-col justify-start items-start gap-7 overflow-hidden">
-                <div class="w-[1117px] inline-flex justify-between items-center overflow-hidden">
+                class="w-[420px] lg:w-[1234px] lg:px-14 lg:py-10 bg-lime-300 rounded-[45px] shadow-[0px_5px_0px_0px_rgba(25,26,35,1.00)] outline outline-1 outline-offset-[-1px] outline-zinc-900 flex flex-col justify-start items-start gap-7 overflow-hidden">
+                <div class="w-full lg:w-[1117px] inline-flex justify-between items-center overflow-hidden">
                     <div class="flex justify-start items-center gap-6">
                         <div class="justify-start text-black text-6xl font-medium font-['Space_Grotesk']">01</div>
-                        <div class="w-[612px] justify-start text-black text-3xl font-medium font-['Space_Grotesk']">
+                        <div class="w-full lg:w-[612px] justify-start text-black text-3xl font-medium font-['Space_Grotesk']">
                             Consultation</div>
                     </div>
                     <div data-property-1="Minus" class="w-14 h-14 relative">
@@ -160,8 +186,8 @@
                         <div class="w-4 h-1.5 left-[20px] top-[26px] absolute bg-black"></div>
                     </div>
                 </div>
-                <div class="w-[1114px] h-0 outline outline-1 outline-offset-[-0.50px] outline-black"></div>
-                <div class="w-[1114px] h-14 justify-start text-black text-lg font-normal font-['Space_Grotesk']">During
+                <div class="w-full lg:w-[1114px] h-0 outline outline-1 outline-offset-[-0.50px] outline-black"></div>
+                <div class="w-full lg:w-[1114px] h-14 justify-start text-black text-lg font-normal font-['Space_Grotesk']">During
                     the
                     initial consultation, we will discuss your business goals and objectives, target audience, and
                     current
@@ -197,11 +223,11 @@
                 </div>
             </div>
             <div
-                class="w-[1234px] px-14 py-10 bg-zinc-100 rounded-[45px] shadow-[0px_5px_0px_0px_rgba(25,26,35,1.00)] outline outline-1 outline-offset-[-1px] outline-zinc-900 flex flex-col justify-start items-start gap-2.5 overflow-hidden">
-                <div class="w-[1117px] inline-flex justify-between items-center overflow-hidden">
+                class="lg:w-[1234px] px-5 lg:px-14 py-10 bg-zinc-100 rounded-[45px] shadow-[0px_5px_0px_0px_rgba(25,26,35,1.00)] outline outline-1 outline-offset-[-1px] outline-zinc-900 flex flex-col justify-center sm:justify-start sm:items-start gap-2.5 overflow-hidden">
+                <div class="w-full lg:w-[1117px] inline-flex justify-between items-center overflow-hidden">
                     <div class="flex justify-start items-center gap-6">
                         <div class="justify-start text-black text-6xl font-medium font-['Space_Grotesk']">04</div>
-                        <div class="w-[612px] justify-start text-black text-3xl font-medium font-['Space_Grotesk']">
+                        <div class="sm:w-[612px] justify-start text-black text-3xl font-medium font-['Space_Grotesk']">
                             Monitoring and Optimization</div>
                     </div>
                     <div data-property-1="Plus" class="w-14 h-14 relative">
@@ -213,14 +239,14 @@
     </div>
     <div class="flex justify-center mt-40">
         <div
-            class="px-14 pt-14 pb-12 bg-zinc-900 rounded-tl-[45px] rounded-tr-[45px] inline-flex flex-col justify-start items-start gap-12">
-            <div class="flex flex-col justify-start items-start gap-16">
-                <div class="w-[1121px] inline-flex justify-start items-center gap-40">
+            class="w-full px-14 pt-14 pb-12 bg-zinc-900 rounded-tl-[45px] rounded-tr-[45px] sm:inline-flex flex flex-col sm:justify-start items-start gap-12">
+            <div class="flex flex-col sm:justify-start sm:items-start gap-16">
+                <div class="w-full lg:w-[1121px] flex flex-col sm:inline-flex justify-center sm:justify-start sm:items-center gap-40">
                     <div data-property-1="Variant2" class="w-44 h-7 relative">
-                       <div><img alt="logo" src="./images/logowhite.png" />
+                        <div><img alt="logo" src="./images/logowhite.png" />
+                        </div>
                     </div>
-                    </div>
-                    <div class="flex justify-start items-start gap-10">
+                    <div class="flex flex-col justify-center sm:justify-start sm:items-start gap-10">
                         <div class="justify-start text-white text-lg font-normal font-['Space_Grotesk'] underline">About
                             us
                         </div>
@@ -242,7 +268,8 @@
                         </div>
                         <div class="w-7 h-7 rounded-full">
                             <img alt="logo" src="./images/social-linkedin.png" />
-                        </div><div class="w-7 h-7 rounded-full">
+                        </div>
+                        <div class="w-7 h-7 rounded-full">
                             <img alt="logo" src="./images/social-twitter.png" />
                         </div>
                     </div>
